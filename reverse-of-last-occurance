@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string s;
+    char ch;
+
+    if (cin >> s >> ch) {
+        size_t pos = s.rfind(ch);
+
+        if (pos != string::npos) {
+            reverse(s.begin() + pos, s.end());
+        }
+        cout << s << "\n";
+    }
+
+    return 0;
+}
